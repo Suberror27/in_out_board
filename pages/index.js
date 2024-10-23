@@ -9,9 +9,28 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main id="mainContainer">
-          <NavigationBar />
-    </main>
+      <main id="mainContainer" className="bg-blue-900">
+          {/* <NavigationBar /> */}
+          <div className="h-screen grid grid-rows-[15vh_5vh_1fr]">
+            <header className="bg-white flex items-center justify-center">
+              Header
+            </header>
+            <div className="bg-gray-800 text-white flex">
+              <div className="grid grid-cols-3 w-full">
+                <div className="bg-slate-400 flex items-center justify-center">List Title 1</div>
+                <div className="bg-slate-800 flex items-center justify-center">List Title 2</div>
+                <div className="bg-slate-950 flex items-center justify-center">List Title 3</div>
+              </div>
+            </div>
+            <div className="bg-gray-600 text-white flex">
+              <div className="grid grid-cols-3 w-full">
+                <div className="bg-blue-200 flex items-center justify-center">List 1</div>
+                <div className="bg-blue-400 flex items-center justify-center">List 2</div>
+                <div className="bg-blue-700 flex items-center justify-center">List 3</div>
+              </div>
+            </div>
+          </div>
+      </main>
   </>
   );
 }
