@@ -10,27 +10,62 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <main id="mainContainer" className="bg-blue-900">
-          {/* <NavigationBar /> */}
-          <div className="h-screen grid grid-rows-[15vh_5vh_1fr]">
-            <header className="bg-white flex items-center justify-center">
-              Header
+          <NavigationBar />
+          <div className="h-screen grid grid-rows-[10vh_1fr] md:grid-rows-[10vh_1fr]">
+
+            <header className="flex items-center justify-center">
+              <h1 className="text-xl md:text-4xl">In & Out Board</h1>
             </header>
-            <div className="bg-gray-800 text-white flex">
-              <div className="grid grid-cols-3 w-full">
-                <div className="bg-slate-400 flex items-center justify-center">List Title 1</div>
-                <div className="bg-slate-800 flex items-center justify-center">List Title 2</div>
-                <div className="bg-slate-950 flex items-center justify-center">List Title 3</div>
+            
+              <div className="text-white flex">
+
+                  <div className="grid md:grid-cols-3 w-full">
+
+                      <div className="grid grid-rows-[7vh_1fr]">
+
+                          <div className="flex justify-center text-black">
+                              <h1 className="text-lg md:text-2xl">Title List 1</h1>
+                          </div>
+                          
+                          <div className="flex flex-col">
+                              <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem]"></div>
+                          </div>
+                      
+                      </div>
+
+                      <div className="grid grid-rows-[7vh_1fr]">
+
+                        <div className="flex justify-center text-black">
+                            <h1 className="text-lg md:text-2xl">Title List 2</h1>
+                        </div>
+                        <div className="flex flex-col">
+                            <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem]"></div>
+                        </div>
+                      
+                      </div>
+
+                      <div className="grid grid-rows-[7vh_1fr]">
+                        <div className="flex justify-center text-black">
+                            <h1 className="text-lg md:text-2xl">Title List 3</h1>
+                        </div>
+                        <div className="flex flex-col">
+                            <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem]"></div>
+                        </div>
+                      
+                      </div>
+                    
+                  </div>
+
               </div>
-            </div>
-            <div className="bg-gray-600 text-white flex">
-              <div className="grid grid-cols-3 w-full">
-                <div className="bg-blue-200 flex items-center justify-center">List 1</div>
-                <div className="bg-blue-400 flex items-center justify-center">List 2</div>
-                <div className="bg-blue-700 flex items-center justify-center">List 3</div>
-              </div>
-            </div>
+
           </div>
       </main>
   </>
   );
 }
+
+
+ {/* <h1 className="text-lg md:text-2xl">Users List 1</h1>
+                  <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem]">
+
+                  </div> */}

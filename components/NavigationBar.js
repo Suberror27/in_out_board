@@ -41,7 +41,7 @@ export function NavigationBar() {
     : "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold hover:cursor-pointer";
 
 return (
-  <nav className="bg-primary-500 text-white p-4 z-20 sticky top-0">
+  <nav className="bg-primary-500 text-white p-4 z-20 sticky top-0 md:hidden">
     <div className="container mx-auto flex justify-end">
 
       {/* Hamburger Button */}
