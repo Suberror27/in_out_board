@@ -7,23 +7,86 @@ export default function Cards(props) {
     const [dataReady, setDataReady] = useState([]);
     const [showLoading, setShowLoading] = useState(true);
 
-    useEffect(() => {
-        const dataRef = ref(database, 'Managers'); // Change to your Firebase path
+    // useEffect(() => {
+    //     const dataRef = ref(database, 'Managers'); // Change to your Firebase path
 
-        const unsubscribe = onValue(dataRef, (snapshot) => {
-            const dataList = [];
-            snapshot.forEach((childSnapshot) => {
-                const item = childSnapshot.val();
-                dataList.push({ id: childSnapshot.key, ...item });
-            });
-            setDataReady(dataList);
-        }, (error) => {
-            console.error('Error fetching data:', error);
-        });
+    //     const unsubscribe = onValue(dataRef, (snapshot) => {
+    //         const dataList = [];
+    //         snapshot.forEach((childSnapshot) => {
+    //             const item = childSnapshot.val();
+    //             dataList.push({ id: childSnapshot.key, ...item });
+    //         });
+    //         setDataReady(dataList);
+    //     }, (error) => {
+    //         console.error('Error fetching data:', error);
+    //     });
 
-        // Cleanup listener on unmount
-        return () => unsubscribe();
-    }, []);
+    //     // Cleanup listener on unmount
+    //     return () => unsubscribe();
+    // }, []);
+    
+    // useEffect(() => {
+    //     const collections = ["Managers"]; // Add your collection names here
+    //     const fetchedData = [];
+
+    //     const promises = collections.map(collection => {
+    //         const dataRef = ref(database, collection);
+    //         return new Promise((resolve, reject) => {
+    //             onValue(dataRef, (snapshot) => {
+    //                 const items = [];
+    //                 snapshot.forEach((childSnapshot) => {
+    //                     const item = childSnapshot.val();
+    //                     items.push({ id: childSnapshot.key, ...item });
+    //                 });
+    //                 fetchedData[collection] = items;
+    //                 resolve();
+    //             }, (error) => {
+    //                 console.error(`Error fetching data from ${collection}:`, error);
+    //                 reject(error);
+    //             });
+    //         });
+    //     });
+
+    //     Promise.all(promises)
+    //         .then(() => {
+    //             setDataReady(fetchedData);
+    //             setShowLoading(false);
+    //             console.log(dataReady);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error fetching collections:', error);
+    //             setShowLoading(false);
+    //         });
+    // }, []);
+
+    // useEffect(() => {
+    //     const rootRef = ref(database); // Reference to the root of the database
+
+    //     const unsubscribe = onValue(rootRef, (snapshot) => {
+    //         const fetchedData = {};
+    //         snapshot.forEach((childSnapshot) => {
+    //             const collectionName = childSnapshot.key; // Get the collection name
+    //             const items = [];
+
+    //             childSnapshot.forEach((itemSnapshot) => {
+    //                 const item = itemSnapshot.val();
+    //                 items.push({ id: itemSnapshot.key, ...item });
+    //             });
+
+    //             fetchedData[collectionName] = items; // Store items under their collection name
+    //         });
+
+    //         setDataReady(fetchedData);
+    //         setShowLoading(false);
+    //         console.log(dataReady);
+    //     }, (error) => {
+    //         console.error('Error fetching data:', error);
+    //         setShowLoading(false);
+    //     });
+
+    //     // Cleanup listener on unmount
+    //     return () => unsubscribe();
+    // }, []);
 
     return(<>
     {dataReady && dataReady.length > 0 ? dataReady.map((key, index) => (
