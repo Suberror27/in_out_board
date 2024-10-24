@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { database } from "@/utils/firebase";
 import { ref, onValue } from 'firebase/database';
 
-export default function Cards() {
+export default function Cards(props) {
     const [dataReady, setDataReady] = useState([]);
     const [showLoading, setShowLoading] = useState(true);
 
@@ -17,7 +17,6 @@ export default function Cards() {
                 dataList.push({ id: childSnapshot.key, ...item });
             });
             setDataReady(dataList);
-            console.log(dataReady);
         }, (error) => {
             console.error('Error fetching data:', error);
         });
@@ -27,13 +26,14 @@ export default function Cards() {
     }, []);
 
     return(<>
-       <div className="container bg-slate-700 rounded-md md:rounded-lg w-[21.5rem] md:w-[23rem] h-[3rem] md:h-[2.5rem] m-1">
+    {dataReady && dataReady.length > 0 ? dataReady.map((key, index) => (
+        <div key={index} className="container bg-slate-700 rounded-md md:rounded-lg w-[21.5rem] md:w-[23rem] h-[3rem] md:h-[2.5rem] m-1">
             <div className="flex flex-wrap justify-start items-center gap-1">
                 <div className="rounded-md md:rounded-lg bg-blue-700 flex h-full w-[3rem] md:w-[2.5rem]">
                     <Image src="/picture_placeholder.svg" width={100} height={100} alt="Picture"/>
                 </div>
-                <div>Abraham C</div>
-                <select className="text-black text-center bg-transparent border border-black">
+                <div>{key.displayName}</div>
+                <select name="Location" className="text-black text-center bg-transparent border border-black">
                     <option>Location</option>
                     <option>Home 🏠</option>
                     <option>Lunch 🥪</option>
@@ -48,6 +48,8 @@ export default function Cards() {
                 </div>
             </div>
         </div> 
+    )) : <Image priority={true} className="w-[10rem] h-[10rem] md:w-[30rem] md:h-[30rem]" hidden={!showLoading} src="/loader.gif" width={1} height={1} alt="Loader"/>}
+       
     </>
     );
 }
