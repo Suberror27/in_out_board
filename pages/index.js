@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { NavigationBar } from "@/components/NavigationBar";
 
 export default function Home() {
@@ -13,8 +14,8 @@ export default function Home() {
             <NavigationBar />
             <div className="h-screen grid grid-rows-[10vh_1fr] md:grid-rows-[10vh_1fr]"> {/* Div that sets grid of Rows 10vh on the top for the header and the rest for the list of names */}
 
-                <header className="flex items-center justify-center">
-                    <h1 className="text-xl md:text-4xl">In & Out Board</h1>
+                <header className="flex items-center justify-center text-center">
+                    <h1 className="text-xl md:text-4xl">In & Out Board (Title and logo of your company goes here)</h1>
                 </header>
                 
                 <div className="text-white flex"> {/* Div that serves as wrapper for the rest of the rows set by parent Div (90vh) */}
@@ -29,10 +30,13 @@ export default function Home() {
                             
                             <div className="container">
                                 <div className="flex flex-wrap justify-center">
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
+
+                                    <div className="container bg-slate-700 rounded-md md:rounded-lg w-[18rem] h-[3rem] m-2">
+                                        <div className="rounded-md md:rounded-lg bg-blue-700 flex h-full w-[3rem]">
+                                            <Image src="/picture_placeholder.svg" width={100} height={100} alt="Picture"/>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         
