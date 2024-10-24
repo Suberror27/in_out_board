@@ -1,6 +1,30 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { database } from "@/utils/firebase";
+import { ref, onValue } from 'firebase/database';
 
 export default function Cards() {
+    const [dataReady, setDataReady] = useState([]);
+    const [showLoading, setShowLoading] = useState(true);
+
+    useEffect(() => {
+        const dataRef = ref(database, 'Managers'); // Change to your Firebase path
+
+        const unsubscribe = onValue(dataRef, (snapshot) => {
+            const dataList = [];
+            snapshot.forEach((childSnapshot) => {
+                const item = childSnapshot.val();
+                dataList.push({ id: childSnapshot.key, ...item });
+            });
+            setDataReady(dataList);
+            console.log(dataReady);
+        }, (error) => {
+            console.error('Error fetching data:', error);
+        });
+
+        // Cleanup listener on unmount
+        return () => unsubscribe();
+    }, []);
 
     return(<>
        <div className="container bg-slate-700 rounded-md md:rounded-lg w-[21.5rem] md:w-[23rem] h-[3rem] md:h-[2.5rem] m-1">

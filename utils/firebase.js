@@ -1,10 +1,7 @@
-// lib/firebase.js
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-// Add any other Firebase services you want to use
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 
-// Your Firebase configuration from the .env.local file
+// Firebase configuration from the .env.local file
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -19,8 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialize services
-export const auth = getAuth(app);
-export const firestore = getFirestore(app);
-// Export other services if needed
+export const database = getDatabase(app);
 
 export default app;
