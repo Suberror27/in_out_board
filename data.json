@@ -1,0 +1,62 @@
+{
+    "Managers": [
+        {
+            "userId": "abcd1234",
+            "firstName": "Abraham",
+            "lastName": "Camargo",
+            "displayName": "Abraham C",
+            "outLocation": "Home",
+            "inLocation": "Building A",
+            "status": true
+        },
+        {
+            "userId": "1234bcda",
+            "firstName": "Camargo",
+            "lastName": "Abraham",
+            "displayName": "Camargo A",
+            "outLocation": "Appointment",
+            "inLocation": "Building B",
+            "status": false
+        }
+    ],
+    "ListA": [
+        {
+            "userId": "abcd1234",
+            "firstName": "Abraham",
+            "lastName": "Camargo",
+            "displayName": "Abraham C",
+            "outLocation": "Home",
+            "inLocation": "Building A",
+            "status": true
+        },
+        {
+            "userId": "1234bcda",
+            "firstName": "Camargo",
+            "lastName": "Abraham",
+            "displayName": "Camargo A",
+            "outLocation": "Appointment",
+            "inLocation": "Building B",
+            "status": false
+        }
+    ],
+    "ListB": [
+        {
+            "userId": "abcd1234",
+            "firstName": "Abraham",
+            "lastName": "Camargo",
+            "displayName": "Abraham C",
+            "outLocation": "Home",
+            "inLocation": "Building A",
+            "status": true
+        },
+        {
+            "userId": "1234bcda",
+            "firstName": "Camargo",
+            "lastName": "Abraham",
+            "displayName": "Camargo A",
+            "outLocation": "Appointment",
+            "inLocation": "Building B",
+            "status": false
+        }
+    ]
+}

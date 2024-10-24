@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import { NavigationBar } from "@/components/NavigationBar";
+import Cards from "@/components/Cards";
 
 export default function Home() {
   return (<>
@@ -15,7 +15,7 @@ export default function Home() {
             <div className="h-screen grid grid-rows-[10vh_1fr] md:grid-rows-[10vh_1fr]"> {/* Div that sets grid of Rows 10vh on the top for the header and the rest for the list of names */}
 
                 <header className="flex items-center justify-center text-center">
-                    <h1 className="text-xl md:text-4xl">(Title and logo of your company goes here)</h1>
+                    <h1 className="text-xl md:text-5xl font-semibold">(Title and logo of your company goes here)</h1>
                 </header>
                 
                 <div className="text-white flex"> {/* Div that serves as wrapper for the rest of the rows set by parent Div (90vh) */}
@@ -25,33 +25,13 @@ export default function Home() {
                         <div className="grid grid-rows-[7vh_1fr] bg-amber-500"> {/* First Div column than serves as grid template for two rows, first one 7vh and the second one rest of available height */}
 
                             <div className="flex justify-center items-center text-center text-black bg-amber-100">
-                                <h1 className="text-lg md:text-2xl">Managers</h1>
+                                <h1 className="text-lg md:text-3xl font-semibold">Managers</h1>
                             </div>
                             
                             <div className="container">
                                 <div className="flex flex-wrap justify-center">
 
-                                    <div className="container bg-slate-700 rounded-md md:rounded-lg w-[21.5rem] md:w-[23rem] h-[3rem] md:h-[2.5rem] m-1">
-                                        <div className="flex flex-wrap justify-start items-center gap-1">
-                                            <div className="rounded-md md:rounded-lg bg-blue-700 flex h-full w-[3rem] md:w-[2.5rem]">
-                                                <Image src="/picture_placeholder.svg" width={100} height={100} alt="Picture"/>
-                                            </div>
-                                            <div>Abraham C</div>
-                                            <select className="text-black text-center bg-transparent border border-black">
-                                                <option>Location</option>
-                                                <option>Home 🏠</option>
-                                                <option>Lunch 🥪</option>
-                                                <option>Appointment 📅</option>
-                                                <option>Etc...</option>
-                                            </select>
-                                            <div className="rounded-md md:rounded-lg hidden md:block h-full md:w-[2.5rem] ml-auto">
-                                                <Image src="/badge.svg" width={100} height={100} alt="Picture"/>
-                                            </div>
-                                            <div className="rounded-md md:rounded-lg flex h-full w-[3rem] md:w-[2.5rem] ml-auto">
-                                                <Image src="/out.svg" width={100} height={100} alt="Picture"/>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Cards />
 
                                 </div>
                             </div>
@@ -60,15 +40,14 @@ export default function Home() {
                         <div className="grid grid-rows-[7vh_1fr] bg-blue-400"> {/* Second Div column than serves as grid template for two rows, first one 7vh and the second one rest of available height */}
 
                             <div className="flex justify-center items-center text-center text-black bg-blue-100">
-                                <h1 className="text-lg md:text-2xl">Title List 2</h1>
+                                <h1 className="text-lg md:text-3xl font-semibold">Associate List Title 2</h1>
                             </div>
 
                             <div className="container">
                                 <div className="flex flex-wrap justify-center">
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
+                                
+                                    <Cards />
+
                                 </div>
                             </div>
                         
@@ -76,15 +55,14 @@ export default function Home() {
                         <div className="grid grid-rows-[7vh_1fr] bg-red-400"> {/* Third Div column than serves as grid template for two rows, first one 7vh and the second one rest of available height */}
 
                             <div className="flex justify-center items-center text-center text-black bg-red-100">
-                                <h1 className="text-lg md:text-2xl">Title List 3</h1>
+                                <h1 className="text-lg md:text-3xl font-semibold">Associate List Title 3</h1>
                             </div>
 
                             <div className="container">
                                 <div className="flex flex-wrap justify-center">
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
-                                    <div className="bg-slate-700 rounded-xl w-[15rem] h-[3rem] m-2"></div>
+                                
+                                    <Cards />
+
                                 </div>
                             </div>
                         
