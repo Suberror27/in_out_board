@@ -37,7 +37,7 @@ export default function Home() {
                             </div>
                         
                         </div> {/* End First Div column than serves as grid template for two rows, first one 7vh and the second one rest of available height */}
-                        <div className="grid grid-rows-[7vh_1fr] bg-blue-400"> {/* Second Div column than serves as grid template for two rows, first one 7vh and the second one rest of available height */}
+                        <div className="grid grid-rows-[7vh_1fr] bg-blue-400"> {/* Second Div column than serves as grid template for two rows, first one 7vh and the second one rest of available height. */}
 
                             <div className="flex justify-center items-center text-center text-black bg-blue-100">
                                 <h1 className="text-lg md:text-3xl font-semibold">Associate List A</h1>
