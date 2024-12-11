@@ -15,7 +15,7 @@ export default function Home() {
             <div className="h-screen grid grid-rows-[10vh_1fr] md:grid-rows-[10vh_1fr]"> {/* Div that sets grid of Rows 10vh on the top for the header and the rest for the list of names */}
 
                 <header className="flex items-center justify-center text-center">
-                    <h1 className="text-xl md:text-5xl font-semibold">(Title and logo of your company goes here)</h1>
+                    <h1 className="text-xl md:text-5xl font-semibold">(Title and logo of your company goes here.)</h1>
                 </header>
                 
                 <div className="text-white flex"> {/* Div that serves as wrapper for the rest of the rows set by parent Div (90vh) */}
