@@ -44,7 +44,7 @@ return (
   <nav className="text-white bg-black p-4 z-20 sticky top-0 md:hidden">
     <div className="container mx-auto flex justify-end">
 
-      {/* Hamburger Button. */}
+      {/* Hamburger Button */}
       <div className="md:hidden ">
         <button ref={buttonRef} onClick={toggleMenu} className="text-2xl focus:outline-none">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
