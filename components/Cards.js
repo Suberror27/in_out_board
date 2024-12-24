@@ -21,7 +21,7 @@ export default function Cards(props) {
     //         console.error("Error fetching data:", error);
     //     });
 
-    //     // Cleanup listener on unmount.
+    //     // Cleanup listener on unmount..
     //     return () => unsubscribe();
     // }, []);
 
