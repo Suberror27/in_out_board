@@ -55,7 +55,7 @@ export default function Cards(props) {
     // }, []);
 
     useEffect(() => {
-        const rootRef = ref(database); // Reference to the root of the database.
+        const rootRef = ref(database); // Reference to the root of the database..
     
         const unsubscribe = onValue(rootRef, (snapshot) => {
             const fetchedData = {}; // Initialize as an object
