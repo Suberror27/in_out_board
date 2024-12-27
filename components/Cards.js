@@ -8,7 +8,7 @@ export default function Cards(props) {
     const [showLoading, setShowLoading] = useState(true);
 
     // useEffect(() => {
-    //     const dataRef = ref(database, "Managers"); // Change to your Firebase path..
+    //     const dataRef = ref(database, "Managers"); // Change to your Firebase path...
 
     //     const unsubscribe = onValue(dataRef, (snapshot) => {
     //         const dataList = [];
